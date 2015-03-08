@@ -37,21 +37,10 @@
 				</div>
 				<div class="collapse navbar-collapse">
 					<ul id="navigation" class="nav navbar-nav navbar-right text-center">
-						<li><a href="#products">Products</a></li>
-						<li><a href="#about">About</a></li>
+						<li><a href="#products">Pricing Plan</a></li>
+						<li><a href="#about">About Us</a></li>
 						<li><a href="#testimonial">Testimonials</a></li>
-						<li><a href="#orderform">Order</a></li>
-						<li><a href="#contact">Contact</a></li>
-						<li class="dropdown">
-							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">UK</button>
-							<ul class="dropdown-menu">
-							<li><a href="#">English</a></li>
-							<li><a href="#">Deutsch</a></li>
-							<li><a href="#">France</a></li>
-							<li><a href="#">Slovak</a></li>
-						  </ul>
-						</li>
-
+						<li><a href="#feedback">Feedback</a></li>
 					</ul>
 				</div>
 
@@ -273,11 +262,11 @@
 			</div>
 		</section>
 
-		<section id="contact" class="gray-bg padding-top-bottom">
+		<section id="feedback" class="gray-bg padding-top-bottom">
 			<div class="container">
 				<header class="section-header text-center">
-					<h1><strong>Contact</strong></h1>
-					<p>Do you have some kind of problem with our products?</p>
+					<h1><strong>Feedback</strong></h1>
+					<p>We are a young start up and we will appreciate any form of feedback towards our product. Cheers!</p>
 				</header>
 				<form action="home.html" method="post" novalidate id="contact-form">
 					<div class="row">
@@ -414,3 +403,68 @@
 		<script type="text/javascript" src="js/app.js"></script>
 	</body>
 </html>
+<script>
+   var myApp = angular.module("myApp", ["firebase"]);
+    myApp.controller('userController', ['$scope', '$firebase',
+        
+        function($scope, $firebase) {
+    $scope.newuser = {};
+    $scope.fName = '';
+    $scope.lName = '';
+    $scope.passw1 = '';
+    $scope.passw2 = '';
+    
+    //We can replace this with a Firebase url later on. 
+    var ref = new Firebase("https://sebastiensim.firebaseio.com/");
+    $scope.users = $firebase(ref.child("user")).$asArray(); 
+    /*
+    $scope.users = [
+        {id:1, fName:'Hege'  , lName:"Pege" },
+        {id:2, fName:'Kim'   , lName:"Pim" },
+        {id:3, fName:'Jack'  , lName:"Jones" },
+        {id:4, fName:'John'  , lName:"Doe" },
+        {id:5, fName:'Peter' , lName:"Pan" }
+    ];
+    */
+    
+    $scope.edit = false;
+    $scope.error = false;
+    $scope.incomplete = false;  
+    
+    
+    $scope.editUser = function(id) {
+        $scope.currentId = id;
+        if (id == 'new') {
+            $scope.edit = true;
+            $scope.incomplete = true;
+            $scope.newuser.fName = '';
+            $scope.newuser.lName = '';
+            console.log("new user.");
+        } else {
+            $scope.edit = true;
+            $scope.newuser = $firebase(ref.child("user").child(id)).$asObject();
+            console.log("existing user.");
+        }
+    };
+    
+
+    $scope.save = function(){
+      //Add new if no index is passed in.
+      
+      if($scope.currentId=='new'){
+        //Using the array length as the next index while prototyping. 
+         $scope.users.$add($scope.newuser);
+      }
+      else{
+        $scope.newuser.$save();
+      }
+    };
+    
+    $scope.deleteUser = function(index){
+      $scope.users.$remove(index);
+      console.log("removing "+index);
+    }
+    
+    }]);
+
+</script>
