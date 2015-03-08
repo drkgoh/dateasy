@@ -1,3 +1,0 @@
-# dateasy
-
-dateasy landing page
