@@ -1,1 +1,348 @@
-<div id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation" custom2> <div class="container"> <div class="navbar-header"> <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </button> <a class="navbar-brand" href="#home"> <img id="navlogo" src="images/navlogo-datEasy.f67e2d07.png" alt="microstore" width="122" height="45"> </a> </div> <div class="collapse navbar-collapse"> <ul id="navigation" class="nav navbar-nav navbar-right text-center"> <li><a href="#products">Pricing Plan</a></li> <li><a href="#about">About Us</a></li> <li><a href="#testimonial">Testimonials</a></li> <li><a href="#feedback">Feedback</a></li> <li ng-if="!user"><button class="btn btn-primary btn-fb" ng-click="oauthLogin('facebook')">Facebook Login</button></li> <li ng-if="user" class="user">Welcome {{user.name}}</li> </ul> </div> </div> </div> <section id="hero" class="hero-image-bg light-typo"> <div class="container welcome-content"> <div class="row"> <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12 text-center wow fadeInUp"> <img id="logo" src="images/datEasyLogo.bd194c51.png" class="img-responsive text-center" alt="shop logo" width="300"> <h2>Why must dating be such a pain? With DatEasy, it's just that easy.</h2> <ul class="social-links text-center"> <li><a href="#link"><i class="icon-twitter"></i></a></li> <li><a href="#link"><i class="icon-facebook"></i></a></li> <li><a href="#link"><i class="icon-vimeo"></i></a></li> </ul> <a class="btn btn-store smooth-scroll" href="#products">browse our plans</a> </div> </div> </div> <div class="overlay-bg"></div> </section> <section id="pricing_section"> <div class="container"> <h1 style="color:#000">Pricing</h1> <div class="row"> <div class="col-sm-4"> <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="priceplan1"> <input type="hidden" name="cmd" value="_s-xclick"> <input type="hidden" name="hosted_button_id" value="XWAAM9S77358C"> <div class="priceplan1 priceplan panel"> <div class="box"> <h2><strong>Silver Plan</strong></h2> <h3>The Standard</h3><br><br> <div class="subscription_price"> <h2 style="margin:auto;line-height:200px"><strong>$30/m</strong></h2> </div> <h3>Generation per month</h3> <h2><strong>4 Times</strong></h2> <hr style="border-style:dotted"> <h3>Registration of Itinerary</h3> <h2><strong>3 Times</strong></h2> <hr style="border-style:dotted"> <h3>Customization</h3> <h2><strong>Yes</strong></h2> </div> <div class="panel-footer"> <a class="btn btn-lg btn-block priceplan1" href="javascript:void(0)" onclick="document.getElementById('priceplan1').submit()">Subscribe Now!</a> </div> </div> </form> </div> <div class="col-sm-4"> <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="priceplan2"> <input type="hidden" name="cmd" value="_s-xclick"> <input type="hidden" name="hosted_button_id" value="K7XQKJUR3BVCJ"> <div class="priceplan2 priceplan panel"> <div class="box"> <h2><strong>Platinum Plan</strong></h2> <h3>Got It Under Control</h3><br><br> <div class="subscription_price"> <h2 style="margin:auto;line-height:200px"><strong>$90/m</strong></h2> </div> <h3>Generation per month</h3> <h2><strong>Unlimited</strong></h2> <hr style="border-style:dotted"> <h3>Registration of Itinerary</h3> <h2><strong>Unlimited</strong></h2> <hr style="border-style:dotted"> <h3>Customization</h3> <h2><strong>Yes</strong></h2> </div> <div class="panel-footer"> <a class="btn btn-lg btn-block priceplan2" href="javascript:void(0)" onclick="document.getElementById('priceplan2').submit()">Subscribe Now!</a> </div> </div> </form> </div> <div class="col-sm-4"> <div class="priceplan3 priceplan panel"> <div class="box"> <h2><strong>Free Plan</strong></h2> <h3>Basic No-Frills Packages</h3><br><br> <div class="subscription_price"> <h2 style="margin:auto;line-height:200px"><strong>$0/m</strong></h2> </div> <h3>Generation per month</h3> <h2><strong>1 Time</strong></h2> <hr style="border-style:dotted"> <h3>Registration of Itinerary</h3> <h2><strong>0 Time</strong></h2> <hr style="border-style:dotted"> <h3>Customization</h3> <h2><strong>No</strong></h2> </div> <div class="panel-footer"> <a class="btn btn-lg btn-block priceplan3" href="">Subscribe Now!</a> </div> </div> </div> </div> </div> </section> <section class="gray-bg padding-top-bottom"> <div class="container"> <div class="row"> <div class="col-md-8 wow fadeInLeft"> <h3 class="center cta-message">Discount of 30% is only available for <strong><span id="countdown"></span></strong></h3> </div> <div class="col-md-4 text-center wow fadeInRight"> <a class="btn btn-store cta-button smooth-scroll" href="#orderform">Order Now</a> </div> </div> </div> </section> <section id="about" class="padding-top-bottom"> <div class="container"> <div class="row"> <div class="col-md-4 wow fadeInLeft"> <header class="section-header cta-message"> <h2>About company</h2> <h4>How we started</h4> </header> </div> <div class="col-md-8 cta-message wow fadeInUp"> <p>Jason, the CEO has always had trouble giving the ladies the perfect date and always ends up getting no second chances. He was down and sad, that's why the idea of DatEasy came. </p> <p style="display:none" id="showme">Sebastien, the CTO was brought in to assist with the development.</p> <a class="btn btn-store outline" id="show-btn" href="#">Read more</a> </div> </div> </div> </section> <section id="testimonial" class="padding-top-bottom image-bg light-typo"> <div class="container"> <div class="testimonial"> <div id="carousel-example-generic" class="carousel slide bs-docs-carousel-example" data-interval="10000"> <ol class="carousel-indicators"> <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li> <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li> <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li> </ol> <div class="carousel-inner"> <div class="item active"> <h1>Now I can impress that girl that <br>I've been eyeing on</h1> <br> <h3>Jonathan Lee</h3> </div> <div class="item"> <h1>I am lazy. I admit it, but I can still deliver <br>that quality date.</h1> <br> <h3>Brandon Seet</h3> </div> <div class="item"> <h1>Trying it now.<br>I love how my boyfriend and I no longer have to fight over where to go</h1> <br> <h3>Amanda Lee</h3> </div> </div> <br><br><br> </div> </div> <div class="overlay-bg"></div> </div> </section> <section id="newsletter" class="light-typo dark-bg padding-top-bottom"> <div class="container"> <header class="section-header text-center"> <h2>Stay in touch</h2> <h4>Sign Up for Email Updates on on News & Offers</h4> </header> <div class="row"> <form id="newsletter-form" action="home.html" method="POST" class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1"> <div class="input-group"> <input id="newsletter-mail" name="email" placeholder="Enter your email" class="form-control input-lg" type="email"> <span class="input-group-btn"> <button name="submit" type="submit" class="btn btn-store">Subscribe!</button> </span> </div> <input type="hidden" name="submitted" id="submitted2" value="true"> </form> </div> </div> </section> <section id="cta" class="padding-top-bottom color-bg light-typo"> <div class="container"> <div class="row text-center"> <div class="col-md-4 col-sm-4 news wow fadeInUp" data-wow-delay="0.2s" data-wow-offset="10"> <i class="icon-trophy iconBig"></i> <h3>Quality guaranteed</h3> </div> <div class="col-md-4 col-sm-4 news wow fadeInUp" data-wow-delay="0.4s" data-wow-offset="10"> <i class="icon-truck iconBig"></i> <h3>No More Aimless Driving</h3> </div> <div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.6s" data-wow-offset="10"> <i class="icon-lock iconBig news"></i> <h3>Secure payment</h3> </div> </div> </div> </section> <section id="feedback" class="gray-bg padding-top-bottom"> <div class="container"> <header class="section-header text-center"> <h1><strong>Feedback</strong></h1> <p>We are a young start up and we will appreciate any form of feedback towards our product. Cheers!</p> </header> <form name="form" ng-submit="addFeedback(form)" novalidate id="contact-form"> <div class="row"> <div class="col-xs-12 col-sm-12 col-md-4 contact-info cta-message wow fadeInLeft"> <address> <strong>DatEasy</strong><br> 25B Charlton Lane<br> Singapore 534960<br> +65 9637 0022<br> contact@dateasy.com </address> </div> <div class="col-xs-12 col-sm-12 col-md-8 wow fadeInUp"> <div class="form-group"> <label class="control-label" for="contact-name">Name</label> <div class="controls"> <input id="contact-name" ng-model="feedback.name" name="contactName" placeholder="Your name" class="form-control input-lg requiredField" type="text" required> </div> <p ng-show="form.contactName.$error.required && submitted">Please enter your name</p> </div> <div class="form-group"> <label class="control-label" for="contact-mail">Email</label> <div class="controls"> <input id="contact-mail" ng-model="feedback.email" name="email" placeholder="Your email" class="form-control input-lg requiredField" type="email" required> </div> <p ng-show="form.email.$error.required && submitted">Please enter your E-Mail address</p> <p class="error" ng-show="form.email.$error.email">Not valid email!</p> </div> <div class="form-group"> <label class="control-label" for="contact-message">Message</label> <div class="controls"> <textarea id="contact-message" ng-model="feedback.feedback" name="comments" placeholder="Your message" class="form-control input-lg requiredField" rows="5" required></textarea> </div> <p ng-show="form.comments.$error.required && submitted">Please enter your feedback</p> </div> <p> <button name="submit" type="submit" class="btn btn-store btn-block">Send Message</button></p> </div> </div> </form> </div> </section> <footer id="main-footer" class="dark-bg light-typo"> <div class="container"> <p class="pull-left copyright wow fadeInUp">&copy; DatEasy 2015. <br>  <div class="pull-right paymentMethodImg copyright wow fadeInRight"> <a class="btn btn-store outline" href="#" data-toggle="modal" data-target=".text-modal">Terms & conditions</a> </div> </div> </footer> <div class="modal fade text-modal" tabindex="-1" role="dialog" aria-hidden="true"> <div class="modal-dialog modal-lg"> <div class="modal-content"> <div class="color-bg"> <div class="container"> <div class="row"> <div class="col-xs-12 col-sm-12 col-md-12 color-bg light-typo" id="9modal-bar"> <h2 class="pull-left">TERMS & CONDITIONS</h2> <a class="close pull-right" href="#" data-dismiss="modal"><i class="icon-close"></i></a> </div> </div> </div> </div> <div class="container"> <div class="row"> <div class="col-xs-12 col-sm-6 col-md-6"> <h3>Pricing policy</h3> <p>Prices are shown in $ (SGD). All prices include Singaore VAT of 7%. The prices of the products will, during the time of placing an order, be valid throughout the process. We however take reservations for typing errors.</p> <h3>Payment</h3> <p>We accept the following credit- and debit cards: Visa, Mastercard, Maestro, Visa Electron, JCB, UnionPay and American Express.</p> <h3>Order confirmation</h3> <p>You will receive an order confirmation by e-mail shortly after placing your order. </p> <h3>Returns</h3> <p>No Returns</p> </div> <div class="col-xs-12 col-sm-6 col-md-6"> <p><br><br><h3>Privacy policy</h3> <p>All your personal information is handled under strict confidence. DatEasy.com will never give any of your personal information to 3rd parties.All information is encrypted for safety.</p> <h3>Security</h3> <p>For the safety of your personal information, we use SSL encryption on all data to and from the site. When placing an order, you can immediately check the security validity by clicking the padlock icon that appears in the URL line of your browser when SSL is activated.</p> <h3>Cookies</h3> <p>Cookies are used by DatEasy.com in order to improve your experience when browsing and using the website. The cookie identifies your computer and allows the site to remember your personal settings. DatEasy.com may not operate properly when cookies are disabled in your web browser.</p> </p> </div> <div class="col-xs-12 col-sm-12 col-md-12 text-center"> <a class="btn btn-store" href="#" data-dismiss="modal">Back to shop</a><br><br> </div> </div> </div> </div> </div> </div>
+<div id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation" custom2>
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#home">
+        <img id="navlogo" src="images/navlogo-datEasy.f67e2d07.png" alt="microstore" width="122" height="45"> </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul id="navigation" class="nav navbar-nav navbar-right text-center">
+        <li><a href="#products">Pricing Plan</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#testimonial">Testimonials</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+        <li ng-if="!user">
+          <button class="btn btn-primary btn-fb" ng-click="oauthLogin('facebook')">Facebook Login</button>
+        </li>
+        <li ng-if="user" class="user">Welcome {{user.name}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<section id="hero" class="hero-image-bg light-typo">
+  <div class="container welcome-content">
+    <div class="row">
+      <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12 text-center wow fadeInUp">
+        <img id="logo" src="images/datEasyLogo.bd194c51.png" class="img-responsive text-center" alt="shop logo" width="300">
+        <h2>Why must dating be such a pain? With DatEasy, it's just that easy.</h2>
+        <ul class="social-links text-center">
+          <li><a href="#link"><i class="icon-twitter"></i></a></li>
+          <li><a href="#link"><i class="icon-facebook"></i></a></li>
+          <li><a href="#link"><i class="icon-vimeo"></i></a></li>
+        </ul> <a class="btn btn-store smooth-scroll" href="#products">browse our plans</a> </div>
+    </div>
+  </div>
+  <div class="overlay-bg"></div>
+</section>
+<section id="pricing_section">
+  <div class="container">
+    <h1 style="color:#000">Pricing</h1>
+    <div class="row">
+      <div class="col-sm-4">
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="priceplan1">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="XWAAM9S77358C">
+          <div class="priceplan1 priceplan panel">
+            <div class="box">
+              <h2>
+                <strong>Silver Plan</strong>
+              </h2>
+              <h3>The Standard</h3>
+              <br>
+              <br>
+              <div class="subscription_price">
+                <h2 style="margin:auto;line-height:200px">
+                  <strong>$30/m</strong>
+                </h2>
+              </div>
+              <h3>Generation per month</h3>
+              <h2>
+                <strong>4 Times</strong>
+              </h2>
+              <hr style="border-style:dotted">
+              <h3>Registration of Itinerary</h3>
+              <h2>
+                <strong>3 Times</strong>
+              </h2>
+              <hr style="border-style:dotted">
+              <h3>Customization</h3>
+              <h2>
+                <strong>Yes</strong>
+              </h2>
+            </div>
+            <div class="panel-footer"> <a class="btn btn-lg btn-block priceplan1" href="javascript:void(0)" onclick="document.getElementById('priceplan1').submit()">Subscribe Now!</a> </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-sm-4">
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="priceplan2">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="K7XQKJUR3BVCJ">
+          <div class="priceplan2 priceplan panel">
+            <div class="box">
+              <h2>
+                <strong>Platinum Plan</strong>
+              </h2>
+              <h3>Got It Under Control</h3>
+              <br>
+              <br>
+              <div class="subscription_price">
+                <h2 style="margin:auto;line-height:200px">
+                  <strong>$90/m</strong>
+                </h2>
+              </div>
+              <h3>Generation per month</h3>
+              <h2>
+                <strong>Unlimited</strong>
+              </h2>
+              <hr style="border-style:dotted">
+              <h3>Registration of Itinerary</h3>
+              <h2>
+                <strong>Unlimited</strong>
+              </h2>
+              <hr style="border-style:dotted">
+              <h3>Customization</h3>
+              <h2>
+                <strong>Yes</strong>
+              </h2>
+            </div>
+            <div class="panel-footer"> <a class="btn btn-lg btn-block priceplan2" href="javascript:void(0)" onclick="document.getElementById('priceplan2').submit()">Subscribe Now!</a> </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-sm-4">
+        <div class="priceplan3 priceplan panel">
+          <div class="box">
+            <h2>
+              <strong>Free Plan</strong>
+            </h2>
+            <h3>Basic No-Frills Packages</h3>
+            <br>
+            <br>
+            <div class="subscription_price">
+              <h2 style="margin:auto;line-height:200px">
+                <strong>$0/m</strong>
+              </h2>
+            </div>
+            <h3>Generation per month</h3>
+            <h2>
+              <strong>1 Time</strong>
+            </h2>
+            <hr style="border-style:dotted">
+            <h3>Registration of Itinerary</h3>
+            <h2>
+              <strong>0 Time</strong>
+            </h2>
+            <hr style="border-style:dotted">
+            <h3>Customization</h3>
+            <h2>
+              <strong>No</strong>
+            </h2>
+          </div>
+          <div class="panel-footer"> <a class="btn btn-lg btn-block priceplan3" href="">Subscribe Now!</a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="gray-bg padding-top-bottom">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 wow fadeInLeft">
+        <h3 class="center cta-message">Discount of 30% is only available for
+          <strong>
+            <span id="countdown"></span>
+          </strong>
+        </h3>
+      </div>
+      <div class="col-md-4 text-center wow fadeInRight"> <a class="btn btn-store cta-button smooth-scroll" href="#orderform">Order Now</a> </div>
+    </div>
+  </div>
+</section>
+<section id="about" class="padding-top-bottom">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 wow fadeInLeft">
+        <header class="section-header cta-message">
+          <h2>About company</h2>
+          <h4>How we started</h4>
+        </header>
+      </div>
+      <div class="col-md-8 cta-message wow fadeInUp">
+        <p>Jason, the CEO has always had trouble giving the ladies the perfect date and always ends up getting no second chances. He was down and sad, that's why the idea of DatEasy came. </p>
+        <p style="display:none" id="showme">Sebastien, the CTO was brought in to assist with the development.</p> <a class="btn btn-store outline" id="show-btn" href="#">Read more</a> </div>
+    </div>
+  </div>
+</section>
+<section id="testimonial" class="padding-top-bottom image-bg light-typo">
+  <div class="container">
+    <div class="testimonial">
+      <div id="carousel-example-generic" class="carousel slide bs-docs-carousel-example" data-interval="10000">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="item active">
+            <h1>Now I can impress that girl that
+              <br>I've been eyeing on</h1>
+            <br>
+            <h3>Jonathan Lee</h3>
+          </div>
+          <div class="item">
+            <h1>I am lazy. I admit it, but I can still deliver
+              <br>that quality date.</h1>
+            <br>
+            <h3>Brandon Seet</h3>
+          </div>
+          <div class="item">
+            <h1>Trying it now.
+              <br>I love how my boyfriend and I no longer have to fight over where to go</h1>
+            <br>
+            <h3>Amanda Lee</h3>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br> </div>
+    </div>
+    <div class="overlay-bg"></div>
+  </div>
+</section>
+<section id="newsletter" class="light-typo dark-bg padding-top-bottom">
+  <div class="container">
+    <header class="section-header text-center">
+      <h2>Stay in touch</h2>
+      <h4>Sign Up for Email Updates on on News & Offers</h4>
+    </header>
+    <div class="row">
+      <form id="newsletter-form" action="home.html" method="POST" class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+        <div class="input-group">
+          <input id="newsletter-mail" name="email" placeholder="Enter your email" class="form-control input-lg" type="email">
+          <span class="input-group-btn">
+            <button name="submit" type="submit" class="btn btn-store">Subscribe!</button>
+          </span>
+        </div>
+        <input type="hidden" name="submitted" id="submitted2" value="true"> </form>
+    </div>
+  </div>
+</section>
+<section id="cta" class="padding-top-bottom color-bg light-typo">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-4 col-sm-4 news wow fadeInUp" data-wow-delay="0.2s" data-wow-offset="10"> <i class="icon-trophy iconBig"></i>
+        <h3>Quality guaranteed</h3>
+      </div>
+      <div class="col-md-4 col-sm-4 news wow fadeInUp" data-wow-delay="0.4s" data-wow-offset="10"> <i class="icon-truck iconBig"></i>
+        <h3>No More Aimless Driving</h3>
+      </div>
+      <div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.6s" data-wow-offset="10"> <i class="icon-lock iconBig news"></i>
+        <h3>Secure payment</h3>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="feedback" class="gray-bg padding-top-bottom">
+  <div class="container">
+    <header class="section-header text-center">
+      <h1>
+        <strong>Feedback</strong>
+      </h1>
+      <p>We are a young start up and we will appreciate any form of feedback towards our product. Cheers!</p>
+    </header>
+    <form name="form" ng-submit="addFeedback(form)" novalidate id="contact-form">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-4 contact-info cta-message wow fadeInLeft">
+          <address>
+            <strong>DatEasy</strong>
+            <br> 25B Charlton Lane
+            <br> Singapore 534960
+            <br> +65 9637 0022
+            <br> contact@dateasy.com </address>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-8 wow fadeInUp">
+          <div class="form-group">
+            <label class="control-label" for="contact-name">Name</label>
+            <div class="controls">
+              <input id="contact-name" ng-model="feedback.name" name="contactName" placeholder="Your name" class="form-control input-lg requiredField" type="text" required> </div>
+            <p ng-show="form.contactName.$error.required && submitted">Please enter your name</p>
+          </div>
+          <div class="form-group">
+            <label class="control-label" for="contact-mail">Email</label>
+            <div class="controls">
+              <input id="contact-mail" ng-model="feedback.email" name="email" placeholder="Your email" class="form-control input-lg requiredField" type="email" required> </div>
+            <p ng-show="form.email.$error.required && submitted">Please enter your E-Mail address</p>
+            <p class="error" ng-show="form.email.$error.email">Not valid email!</p>
+          </div>
+          <div class="form-group">
+            <label class="control-label" for="contact-message">Message</label>
+            <div class="controls">
+              <textarea id="contact-message" ng-model="feedback.feedback" name="comments" placeholder="Your message" class="form-control input-lg requiredField" rows="5" required></textarea>
+            </div>
+            <p ng-show="form.comments.$error.required && submitted">Please enter your feedback</p>
+          </div>
+          <p>
+            <button name="submit" type="submit" class="btn btn-store btn-block">Send Message</button>
+          </p>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+<footer id="main-footer" class="dark-bg light-typo">
+  <div class="container">
+    <p class="pull-left copyright wow fadeInUp">&copy; DatEasy 2015.
+      <br>
+      <div class="pull-right paymentMethodImg copyright wow fadeInRight"> <a class="btn btn-store outline" href="#" data-toggle="modal" data-target=".text-modal">Terms & conditions</a> </div>
+  </div>
+</footer>
+<div class="modal fade text-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="color-bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 color-bg light-typo" id="9modal-bar">
+              <h2 class="pull-left">TERMS & CONDITIONS</h2> <a class="close pull-right" href="#" data-dismiss="modal"><i class="icon-close"></i></a> </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-6">
+            <h3>Pricing policy</h3>
+            <p>Prices are shown in $ (SGD). All prices include Singaore VAT of 7%. The prices of the products will, during the time of placing an order, be valid throughout the process. We however take reservations for typing errors.</p>
+            <h3>Payment</h3>
+            <p>We accept the following credit- and debit cards: Visa, Mastercard, Maestro, Visa Electron, JCB, UnionPay and American Express.</p>
+            <h3>Order confirmation</h3>
+            <p>You will receive an order confirmation by e-mail shortly after placing your order. </p>
+            <h3>Returns</h3>
+            <p>No Returns</p>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6">
+            <p>
+              <br>
+              <br>
+              <h3>Privacy policy</h3>
+              <p>All your personal information is handled under strict confidence. DatEasy.com will never give any of your personal information to 3rd parties.All information is encrypted for safety.</p>
+              <h3>Security</h3>
+              <p>For the safety of your personal information, we use SSL encryption on all data to and from the site. When placing an order, you can immediately check the security validity by clicking the padlock icon that appears in the URL line of your
+                browser when SSL is activated.</p>
+              <h3>Cookies</h3>
+              <p>Cookies are used by DatEasy.com in order to improve your experience when browsing and using the website. The cookie identifies your computer and allows the site to remember your personal settings. DatEasy.com may not operate properly when
+                cookies are disabled in your web browser.</p>
+            </p>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-12 text-center"> <a class="btn btn-store" href="#" data-dismiss="modal">Back to shop</a>
+            <br>
+            <br> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
